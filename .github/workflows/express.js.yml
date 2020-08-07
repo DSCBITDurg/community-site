@@ -13,23 +13,22 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
-
+    name: Build and Test
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Check out repository
       
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
+      name: Set up Node.js
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx  
-    - name: Install packages,lint,build and Unit testing
-      working-directory: ./api
-      run: |
-        npm install
-        CI=true npm run build
-        CI=true npm test
+        node-version: 14.x
+      name: Run ESLint
+    - run: eslint . --ext .js,.jsx,.ts,.tsx  
+      name: Install packages,lint,build and Unit testing
+      
+    - run: |
+        npm ci
+        npm run build
+        npm test
+      name: Build and Test
+        
