@@ -1,0 +1,32 @@
+version: '3'
+services:
+  api:
+    build: ./api/
+    ports:
+      - "8080:8080"
+    command: >
+      sh -c "npm install &&
+            npm start"
+    depends_on:
+      - mongo
+    volumes:
+      - "./api:/usr/src/app/api"
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+  
+  client:
+    build: ./client/
+    command: >
+      sh -c "npm install &&
+             npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./client:/usr/src/app/client"
+    stdin_open: true
+    links:
+      - api
+    depends_on: 
+      - api
