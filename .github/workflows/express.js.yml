@@ -16,19 +16,19 @@ jobs:
     name: Build and Test
     steps:
     - uses: actions/checkout@v2
-    - name: Check out repository
-      
+      name: Check out repository
     - uses: actions/setup-node@v1
       name: Set up Node.js
       with:
         node-version: 14.x
+      
+    - run: eslint . --ext .js,.jsx,.ts,.tsx
       name: Run ESLint
-    - run: eslint . --ext .js,.jsx,.ts,.tsx  
-      name: Install packages,lint,build and Unit testing
+      
       
     - run: |
         npm ci
         npm run build
         npm test
-      name: Build and Test
+      name: Install packages,lint,build and Unit testing
         
