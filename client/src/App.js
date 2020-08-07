@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import urls from './urls'
 import axios from 'axios'
 
 function App() {
   const [title, setTitle] = useState('');
 
   useEffect(() => {
-    axios.get("http://0.0.0.0:8080/")
+   console.log("hello",urls.BASE_API_URL)
+    axios.get(urls.BASE_API_URL)
     .then(function(response){
-      console.log("running")
-      console.log(response.data);
       setTitle(response.data);
     })
     .catch(function(err){
