@@ -1,6 +1,6 @@
 .footerContainer{
     margin: 20px 0;
-  
+    border-top: 1px solid rgba(0,0,0,0.5);
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -65,5 +65,5 @@
 }
 
 .link:hover{
-    transform: scale(1.5);
+    transform: scale(1.5d);
 }
