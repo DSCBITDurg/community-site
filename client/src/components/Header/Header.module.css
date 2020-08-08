@@ -3,13 +3,12 @@
     top: 2em;
     left: 2em;
     right: 2em;
-    border: 2px solid black;
-    padding: 10px;
+    padding: 1em;
 }
 
 .dscLogo{
-    height: 50px;
-    width: 100px;
-    border: 1px solid black;
-    margin-bottom: 20px;
+    height: auto;
+    width: 10vw;
+    min-width: 100px;
+    margin-bottom: 1em;
 }
