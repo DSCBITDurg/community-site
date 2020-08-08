@@ -17,4 +17,4 @@ export default function Layout({children}){
 
 Layout.propTypes = {
     children: PropTypes.node
-} 
+}; 
