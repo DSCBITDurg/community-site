@@ -1,6 +1,6 @@
 .footerContainer{
     margin: 20px 0;
-    border: 1px solid black;
+  
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -9,20 +9,22 @@
 
 .footerMain{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     height: 100%;
     width: 70%;
 }
 
-.dscIcons{
-    display: flex;
-    padding: 1em;
-    flex-direction: column;
+
+ .dscIcon{
+    width: 200px;
+    margin-right: 10%;
+    align-self: center;
 }
 
 .links{
     padding: 1em;
     display: flex;
+    margin-right: 10%;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -30,15 +32,16 @@
 .features{
     display:flex;
     padding: 1em;
+    margin-right: 10%;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 
 .socialHandles{
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(0,0,0,0.4);
     height: 100%;
-    width: 30%;
+    width: 20%;
     padding: 1em;
     display:flex;
     flex-direction: column;
@@ -54,4 +57,13 @@
 
 .footerContainer a{
     margin: 5px 0px;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--primary-font-color);
+}
+
+.link:hover{
+    transform: scale(1.5);
 }
