@@ -7,12 +7,13 @@ services:
     ports:
       - "8080:8080"
     command: >
-      sh -c "yarn install &&
-            yarn start"
+      sh -c "npm install &&
+            npm start"
     depends_on:
       - mongo
     volumes:
       - "./api:/usr/src/app/api"
+      - "/usr/src/app/api/node_modules" 
   mongo:
     image: "mongo"
     ports:
@@ -20,13 +21,15 @@ services:
   
   client:
     build: ./client/
-    command: >
-      sh -c "yarn install &&
-             yarn start"
+    stdin_open: true
     ports:
       - "3000:3000"
+    command: >
+      sh -c "npm install &&
+            npm start"
     volumes:
       - "./client:/usr/src/app/client"
+      - "/usr/src/app/client/node_modules" 
     stdin_open: true
     links:
       - api
