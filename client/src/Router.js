@@ -1,29 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 // import component
-
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 // import pages
 import HomePage from './pages/HomePage';
 
 
-function Router({children}) {
+export default function Router() {
     return (
         
         <BrowserRouter>
-            {children}
+            <Header/>
             <Switch>
                 <Route exact path='/' component={HomePage}/>
             </Switch>
+            <Footer/>
         </BrowserRouter>
         
     );
 }
 
-Router.propTypes = {
-    children: PropTypes.node
-};
-
-export default Router;

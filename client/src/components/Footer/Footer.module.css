@@ -1,0 +1,57 @@
+.footerContainer{
+    margin: 20px 0;
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footerMain{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 70%;
+}
+
+.dscIcons{
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.links{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.features{
+    display:flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.socialHandles{
+    border-left: 1px solid black;
+    height: 100%;
+    width: 30%;
+    padding: 1em;
+    display:flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.eventsAndUs{
+    display:flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footerContainer a{
+    margin: 5px 0px;
+}

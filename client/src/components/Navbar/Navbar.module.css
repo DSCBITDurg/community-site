@@ -2,16 +2,34 @@
     border: 1px solid black;
     display:flex;
     justify-content: space-between;
+    padding: 20px 0px;
 }
 
 .linksContainer{
-    
+ 
 }
 
 .buttonsContainer{
 
 }
 
-a{
+.linksContainer a{
     margin: 0px 5px;
+    text-decoration: none;
+    color: var(--primary-font-color);
+    font-size: var(--primary-font-size);
+}
+
+.buttonsContainer a{
+    margin: 0px 5px;
+    text-decoration: none;
+    color: var(--primary-font-color);
+    font-size: var(--primary-font-size);
+}
+
+
+
+.activeLink{
+    border-bottom: 2px solid black;
+    color: black;
 }
