@@ -1,0 +1,17 @@
+.navbarContainer{
+    border: 1px solid black;
+    display:flex;
+    justify-content: space-between;
+}
+
+.linksContainer{
+    
+}
+
+.buttonsContainer{
+
+}
+
+a{
+    margin: 0px 5px;
+}

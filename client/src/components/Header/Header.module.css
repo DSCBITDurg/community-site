@@ -1,3 +1,11 @@
-.heading{
-    color: var(--primary-color)
+.headerContainer{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.dscLogo{
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    margin-bottom: 20px;
 }
