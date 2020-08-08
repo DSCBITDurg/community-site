@@ -7,8 +7,8 @@ services:
     ports:
       - "8080:8080"
     command: >
-      sh -c "npm install &&
-            npm start"
+      sh -c "yarn install &&
+            yarn start"
     depends_on:
       - mongo
     volumes:
@@ -21,8 +21,8 @@ services:
   client:
     build: ./client/
     command: >
-      sh -c "npm install &&
-             npm start"
+      sh -c "yarn install &&
+             yarn start"
     ports:
       - "3000:3000"
     volumes:
@@ -30,5 +30,5 @@ services:
     stdin_open: true
     links:
       - api
-    depends_on: 
-      - api
+    # depends_on: 
+    #   - api
