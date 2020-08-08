@@ -1,26 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import Router from './Router'
 import urls from './urls';
-import axios from 'axios';
+
+import Header from './components/Header/Header'
+
+// import css file
+import './assets/css/global.css'
 
 function App() {
-    const [title, setTitle] = useState('');
-
-    useEffect(() => {
-        console.log('Hello',urls.BASE_API_URL);
-        axios.get(urls.BASE_API_URL)
-            .then(function(response){
-                setTitle(response.data);
-            })
-            .catch(function(err){
-                console.log(err);
-            });
-    },[]);
-
     return (
-        <div className="App">
-            <h1>Hi</h1>
-            <h1>{title}</h1>
-        </div>
+        <Router>
+            <Header/>
+        </Router>
     );
 }
 
