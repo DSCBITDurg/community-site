@@ -11,20 +11,24 @@
     display: flex;
     justify-content: flex-start;
     height: 100%;
-    width: 70%;
+    width: 10%;
+    flex-grow: 1;
+    /* flex-shrink: 10; */
 }
 
 
  .dscIcon{
-    width: 200px;
-    margin-right: 10%;
+    max-width: 100px;
+    margin-right: 5%;
     align-self: center;
+    flex-grow: 1;
+    flex-shrink: 4;
 }
 
 .links{
     padding: 1em;
     display: flex;
-    margin-right: 10%;
+    margin-right: 5%;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -32,7 +36,7 @@
 .features{
     display:flex;
     padding: 1em;
-    margin-right: 10%;
+    margin-right: 5%;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -67,3 +71,16 @@
 .link:hover{
     transform: scale(1.5d);
 }
+
+
+@media only screen and (max-width: 600px) {
+    .footerContainer{
+        flex-direction: column;
+    }
+    .socialHandles{
+        border: none;
+        align-self: center;
+    }
+    
+}
+
