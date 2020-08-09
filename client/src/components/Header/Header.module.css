@@ -1,15 +1,26 @@
 .headerContainer{
     position: fixed;
-    top: 2em;
+    top: 1em;
     left: 2em;
     right: 2em;
-    /* padding: 1em; */
+    margin-left: auto;
+    margin-right: auto;
     border-bottom: 1px solid rgba(0,0,0,0.5);
+    /* width: 80%; */
+    padding: 2em;
+    background-color: white;
 }
 
 .dscLogo{
     height: auto;
-    width: 10vw;
+    width: 10px;
     min-width: 100px;
     margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+    .headerContainer{
+        text-align: center;
+        top:0;
+    }
 }
