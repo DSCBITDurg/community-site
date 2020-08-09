@@ -1,0 +1,24 @@
+.container{
+    width: 100px;
+    display: flex;
+    margin: 2em;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.5);
+    padding: 3em;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.5);
+    color: black;
+    font-size: 20px;
+    
+}
+.container p {
+    margin: 10px 0px;
+}
+.profilePic{
+    width: 5em;
+    height: auto;
+    border-radius: 50%;
+    
+    border: 1px solid rgba(0,0,0,0.8)
+}
