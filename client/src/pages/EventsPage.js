@@ -105,7 +105,7 @@ function EventsPage() {
 
     return (
         <div className={cx(styles.container)}>
-            <div className={cx(styles.buttons, "animate__animated animate__backInUp")}>
+            <div className={cx(styles.buttons, "animate__animated animate__backInLeft")}>
                 <button onClick={handleButtonClick} className={cx(styles.button, { [styles.active] : activeButtons.upcoming_events} )} name="upcoming_events">Upcoming Events</button>
                 <button onClick={handleButtonClick} className={cx(styles.button, { [styles.active] : activeButtons.past_events} )} name="past_events">Past Events</button>
                 <button onClick={handleButtonClick} className={cx(styles.button, { [styles.active] : activeButtons.gallery} )} name="gallery">Gallery</button>
