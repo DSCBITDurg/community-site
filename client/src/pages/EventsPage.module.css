@@ -7,7 +7,7 @@
     display:flex;
    
     flex-direction: column;
-    
+ 
     justify-content: flex-start;
     border-right: 1px solid rgba(0,0,0,0.5);
     width: 20%;
@@ -21,7 +21,7 @@
     border-radius: 30px;
     margin: 1em 0;
     cursor: pointer;
-    
+   
 }
 
 .button:focus{
@@ -29,8 +29,8 @@
 }
 
 .events{
-    margin-left:10%;
-    width: 50%;
+    margin-left:2%;
+    width: 70%;
 }
 
 .button:hover{
@@ -43,4 +43,14 @@
     background-color: var(--secondary-button-color);
     color:white;
     transform: scale(1.1);
+}
+
+@media only screen and (max-width:750px){
+    .events{
+        margin-left:2%;
+        width: 70%;
+    }
+    .buttons{
+        width: 30%;
+    }
 }
