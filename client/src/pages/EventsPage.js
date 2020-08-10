@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 //components
 import EventCard from '../components/EventCard/EventCard';
+import GalleryCard from '../components/GalleryCard/GalleryCard'
 // import css file
 import styles from './EventsPage.module.css';
 
@@ -52,6 +53,37 @@ function EventsPage() {
             date: '9th august'
         },
     ];
+
+    const fakeGallery = [
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+        {
+            img:"https://miro.medium.com/max/800/1*_5CKuN1m4w2q1pH9ofqU5w.jpeg",
+            title: "bit codes"
+        },
+    ]
     const [activeButtons,setActiveButtons] = useState({upcoming_events:true,past_events:false,gallery:false});
     const handleButtonClick = (e) => {
         const name = e.target.name;
@@ -80,18 +112,41 @@ function EventsPage() {
             </div>
             <div className={styles.events}>
                 { activeButtons['upcoming_events'] &&
-                    fakeEvents.map((event,index) => 
-                        <EventCard img={event.img} title={event.title} desc={event.desc} date={event.date} key={index}/>
-                    )
+                    
+                    <div>
+                    <h1>Upcoming Events</h1>
+                    
+                        {
+                            fakeEvents.map((event,index) => 
+                            <EventCard img={event.img} title={event.title} desc={event.desc} date={event.date} key={index}/>
+                        )   
+                        }
+                    </div>
                 }
                 {
                     activeButtons['past_events'] &&
+                    <div>
                     <h1>Past Events</h1>
+                    
+                        {
+                            fakeEvents.map((event,index) => 
+                            <EventCard img={event.img} title={event.title} desc={event.desc} date={event.date} key={index}/>
+                        )   
+                        }
+                    </div>
                     
                 }
                 {
                     activeButtons['gallery'] &&
-                    <h1>gallery</h1>
+                    <div className={styles.gallery}>
+                    
+                    
+                        {
+                            fakeGallery.map((event,index) => 
+                            <GalleryCard img={event.img} title={event.title} key={index}/>
+                        )   
+                        }
+                    </div>
                 }
             </div>
         </div>
