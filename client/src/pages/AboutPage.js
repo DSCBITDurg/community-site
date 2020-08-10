@@ -1,5 +1,5 @@
 import React from 'react';
-
+import cx from 'classnames'
 
 //import components
 import ProfileCard from '../components/ProfileCard/ProfileCard';
@@ -33,8 +33,8 @@ function AboutPage() {
     ];
 
     return (
-        <div className={styles.container}>
-            <div className={styles.aboutus}>
+        <div className={cx(styles.container)}>
+            <div className={cx(styles.aboutus,"animate__animated animate__backInLeft")}>
 
                 <h1>About Us</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -45,7 +45,7 @@ function AboutPage() {
 
             </div>
 
-            <div className={styles.ourteam}>
+            <div className={cx(styles.ourteam,"animate__animated animate__backInDown")}>
                 <h1>Our Team</h1>
                 <div className={styles.teampics}>
                     {

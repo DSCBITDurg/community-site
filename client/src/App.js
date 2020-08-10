@@ -5,6 +5,7 @@ import Router from './Router';
 
 // import css file
 import './assets/css/global.css';
+import 'animate.css';
 
 function App() {
     return (
