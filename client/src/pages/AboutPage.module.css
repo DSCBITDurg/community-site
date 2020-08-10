@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .aboutus h1{

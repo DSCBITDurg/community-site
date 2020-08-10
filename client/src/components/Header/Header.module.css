@@ -9,6 +9,7 @@
     /* width: 80%; */
     padding: 2em;
     background-color: white;
+    z-index: 100;
 }
 
 .dscLogo{
