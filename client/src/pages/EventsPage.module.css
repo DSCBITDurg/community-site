@@ -58,4 +58,22 @@
     .buttons{
         width: 30%;
     }
+    .container{
+        display:flex;
+        flex-direction: column;
+        min-height: 50vh;
+    }
+    .buttons{
+        display:flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 75%;
+        padding-right: 20px;
+    }
+    .events{
+        align-self: center;
+        margin-left:2%;
+        width: 70%;
+    }
 }
